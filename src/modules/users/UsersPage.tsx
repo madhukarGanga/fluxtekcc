@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { users } from './userData';
 import { NavLink } from 'react-router-dom';
 import UserPref from './UserPref';
@@ -20,6 +20,10 @@ function UsersPage() {
       </div>
       <div className="flex-1 px-10 py-4">
         <Routes>
+          <Route
+            path=""
+            element={<h1 className="text-2xl font-light">Please Select a user from left</h1>}
+          />
           <Route path=":id" element={<UserPref />} />
         </Routes>
       </div>

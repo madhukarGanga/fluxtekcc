@@ -35,4 +35,8 @@ body {
   .contentArea {
     @apply mx-2 md:mx-20 lg:mx-44 py-6;
   }
+  select,
+  input[type='text'] {
+    @apply border border-solid border-gray-600 p-2 outline-none w-full;
+  }
 }
