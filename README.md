@@ -2,45 +2,49 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## How to run
 
-In the project directory, you can run:
+- Open terminal.
+- `cd` to the project directory.
+- run `num install`
+- run `npm start`
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  In the project directory, you can run:
 
-### `npm start`
+## Assignment-1. Create a application with different modules with routing
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 4 modules are created, `users`,`catalog`,`checkout` and `orders`, which are accessible at different routes.
+- User can switch to different module use Top navigation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Assignment-2. Create a common component with a input, select, checkbox and pass data for different components
 
-### `npm test`
+- `src/modules/users/DynamicUserPref.tsx` is the component which renders different sections depends on props.
+- It takes below three `boolean` props and display respective input field based on the value.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```javascript
+  showInterests?: boolean;
+  showExpectedSalary?: boolean;
+  showAvailability?: boolean;
+```
 
-### `npm run build`
+- To see it in action open `http://localhost:3000/users` and select different user from the list. For different user different fields are displayed.
+- <span style="color:#0d9488;font-weight:bold">What field to be shown for which user is based on the data provided in `src/modules/users/userData.ts` file.</span>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Assignment-3. Using Subject from Rxjs variable and do some data manipulation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A simple themeService is implemented using `RxJS` `Subject`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Theme is getting updated in `AppBar`.
+- `src/modules/users/UsersPage.tsx` subscribed to the theme change.
+- `backgroundColor` is getting changed based on the theme value.
 
-### `npm run eject`
+To see it in action
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- open `http://localhost:3000/users`
+- Select any user from list.
+- Change the theme from top-right corner
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Assignment-4. Create a routing params and access them in any component
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `id` routing params is being accessed in `src/modules/users/UserPref.tsx`
+- based on the `id` corresponding user details displayed.
