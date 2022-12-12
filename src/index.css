@@ -9,9 +9,8 @@
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -24,13 +23,16 @@ body {
   .tab li {
     @apply flex;
   }
-  .tab .navLink {
-    @apply flex items-center w-24 justify-center;
+  .tab li .navLink {
+    @apply justify-center w-24;
   }
-  .tab .navLink.active {
-    @apply text-white bg-teal-600 rounded-md;
+  .navLink {
+    @apply flex items-center;
+  }
+  .navLink.active {
+    @apply text-white bg-teal-600;
   }
   .contentArea {
-    @apply mx-2 md:mx-20 lg:mx-14 py-6;
+    @apply mx-2 md:mx-20 lg:mx-44 py-6;
   }
 }

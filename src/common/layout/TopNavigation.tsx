@@ -1,8 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 function TopNavigation() {
   return (
-    <ul className="tab text-gray-3 ml-8">
+    <ul className="tab text-gray-3">
       <li>
         <NavLink className="navLink" to="/users">
           Users
